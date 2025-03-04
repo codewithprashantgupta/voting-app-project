@@ -141,15 +141,15 @@ The services are exposed using Kubernetes **NodePort** to make them accessible t
    To begin, SSH into your EC2 instance with your private key:
 
      ```bash
-      kubectl create -f voting-app-deploy.yaml
-      kubectl create -f voting-service-deploy.yaml
-      kubectl create -f redis-deploy.yaml
+      kubectl create -f vote-deployment.yaml
+      kubectl create -f vote-service.yaml
+      kubectl create -f redis-deployment.yaml
       kubectl create -f redis-service.yaml
-      kubectl create -f postgres-deploy.yaml
-      kubectl create -f postgres-service.yaml
-      kubectl create -f worker-app-deploy.yaml
-      kubectl create -f result-app-deploy.yaml
-      kubectl create -f result-app-service.yaml
+      kubectl create -f db-deployment.yaml
+      kubectl create -f db-service.yaml
+      kubectl create -f worker-deployment.yaml
+      kubectl create -f result-deployment.yaml
+      kubectl create -f result-service.yaml
      ```
 
 7. **Check Service and Port**
